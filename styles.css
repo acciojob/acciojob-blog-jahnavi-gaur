@@ -1,1 +1,22 @@
 /*  your css code here. If applicable */
+.scrolling-heading-container {
+  width: 100%; /* Or a fixed width */
+  overflow: hidden; /* Hides content outside the container */
+  white-space: nowrap; /* Prevents text from wrapping */
+}
+
+.scrolling-heading-text {
+  display: inline-block; /* Allows animation of the text itself */
+  animation: scroll-left 10s linear infinite; /* Adjust duration as needed */
+  /* Initial position off-screen to the right */
+  transform: translateX(100%); 
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(100%); /* Start off-screen right */
+  }
+  100% {
+    transform: translateX(-100%); /* Move off-screen left */
+  }
+}
